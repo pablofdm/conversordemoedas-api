@@ -2,7 +2,7 @@ let url = "https://api.exchangeratesapi.io/latest?base=USD&symbols=BRL";
 let change = true;
 var botao = document.getElementById("troca");
 
-// botao.addEventListener("click", trocaMoeda);
+// FUNÇÕES QUE TROCAM ATRIBUTOS PRA REALIZAR A TROCA DE MOEDAS A CONVERTER
 
 function trocaMoeda() {
   document.getElementById("label").innerHTML = `<label id="label" for="exampleInputEmail1">Valor em reais:</label>`;
@@ -17,6 +17,8 @@ function retrocaMoeda(){
     document.getElementById("troca").value = "R$ PARA U$";
     botao.setAttribute("onclick", "trocaMoeda()");
 }
+
+// FUNÇÃO QUE PEGA O VALOR DA COTAÇÃO DENTRO DA API E REALIZA O CALCULO / MANDA IMPRIMIR NA TELA A RESPOSTA
 
 function converter() {
   let valor = document.getElementById("valor").value;
